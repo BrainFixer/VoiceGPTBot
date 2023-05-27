@@ -1,4 +1,3 @@
-import { rejects } from "assert";
 import axios from "axios";
 import ffmpeg from "fluent-ffmpeg";
 import installer from "@ffmpeg-installer/ffmpeg";

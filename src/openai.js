@@ -1,7 +1,6 @@
 import { Configuration, OpenAIApi } from "openai";
 import { createReadStream } from "fs";
 import config from "config";
-import { log } from "console";
 
 class OpenAI {
   roles = {

@@ -4,6 +4,7 @@ import { code } from "telegraf/format";
 import config from "config";
 import { ogg } from "./ogg.js";
 import { openAI } from "./openai.js";
+import { removeFile } from "./utils.js";
 
 const INITIAL_SESSION = {
   messages: [],
@@ -42,12 +43,15 @@ bot.on(message("voice"), async (ctx) => {
 
     const response = await openAI.chat(ctx.session.messages);
 
-    ctx.session.messages.push({
-      role: openAI.roles.ASSISTANT,
-      content: response.content,
-    });
+    if (response) {
+      ctx.session.messages.push({
+        role: openAI.roles.ASSISTANT,
+        content: response.content,
+      });
 
-    await ctx.reply(response.content);
+      await ctx.reply(response.content);
+    }
+    removeFile(mp3Path);
   } catch (e) {
     console.log(`Error while voice message: ${e.message}`);
   }
