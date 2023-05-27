@@ -1,5 +1,5 @@
 node_modules
-config/default.json
-config/production.json
+config/*.json
 .vscode
-voices
+voices/*.mp3
+voice/*.ogg
