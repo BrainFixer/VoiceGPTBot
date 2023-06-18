@@ -29,7 +29,7 @@ bot.on(message("voice"), async (ctx) => {
 
     await ctx.reply(code(`Ваш запрос: ${text}`));
 
-    await processTextToChat(ctx, text);
+    await processTextToChat(ctx, text, true);
   } catch (e) {
     console.log(`Error while voice message: ${e.message}`);
   }
@@ -39,7 +39,7 @@ bot.on(message("text"), async (ctx) => {
   ctx.session ??= INITIAL_SESSION;
   try {
     await ctx.reply(code("Идет обработка..."));
-    await processTextToChat(ctx, ctx.message.text);
+    await processTextToChat(ctx, ctx.message.text, false);
   } catch (e) {
     console.log(`Error while text message`, e.message);
   }

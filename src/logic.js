@@ -7,10 +7,10 @@ export const INITIAL_SESSION = {
 
 export async function initCommand(ctx) {
   ctx.session = INITIAL_SESSION;
-  await ctx.reply("Введите Ваше текстовое или запишите голосовое сообщение");
+  await ctx.reply("Введите Ваше текстовое или запишите голосовое сообщение.");
 }
 
-export async function processTextToChat(ctx, content) {
+export async function processTextToChat(ctx, content, voiceOrText) {
   ctx.session.messages.push({
     role: openAI.roles.USER,
     content,
@@ -24,18 +24,21 @@ export async function processTextToChat(ctx, content) {
       content: response.content,
     });
 
-    // await ctx.reply(response.content);
+    if (voiceOrText) {
+      const source = await textConverter.textToSpeech(response.content);
 
-    const source = await textConverter.textToSpeech(response.content);
-
-    await ctx.sendAudio(
-      {
-        source,
-      },
-      {
-        title: "Ответ от ChatGPT",
-        performer: "VoiceGPTBot",
-      }
-    );
+      await ctx.sendAudio(
+        {
+          source,
+        },
+        {
+          title: "Ответ от ChatGPT",
+          performer: "VoiceGPTBot",
+          disable_notification: false,
+        }
+      );
+    } else {
+      await ctx.reply(response.content);
+    }
   }
 }
