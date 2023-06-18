@@ -1,16 +1,10 @@
-import { dirname, resolve } from "path";
-import { fileURLToPath } from "url";
-import { readFileSync } from "fs";
 import jwt from "jsonwebtoken";
 import axios from "axios";
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
+import config from "config";
 
 class TextConverter {
   async getToken() {
-    const key = JSON.parse(
-      readFileSync(resolve(__dirname, "../VoiceGPTBot.json"), "utf-8")
-    );
+    const key = config.get("TTS_KEY");
 
     const token = jwt.sign(
       {
