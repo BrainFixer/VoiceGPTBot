@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "brainfixerscience",
+  "private_key_id": "4920802a52adfb8d47c3d0ec935e96143549e8f0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDL0ODvvHJtbUzi\n498kr2CAQAjjL2BLTqxiPQ/U5ZptJ1blfrV1Yoli6DcAbBt1ay8cFJHcQZzeuT0k\nyfNf9prlNiuO18MDKGLo+vJFAzwqfKVIwWl4kJuTNqgCj1ym5TotlPfNT8Ukskii\njKUjflACGlCWx5pyk9DiaC6kaKSagLcrW4Xw46tryL0aCI7zzxSB17i9ZOREEdZQ\n0h1jIqg1F716tPHMGGjehMEoVWCLS4JuNOvzTltqCdPMw1GAzTzTL1I6RgyR9X0u\nwXJ/sVT+9qxN3lo+aUq4+IoL7Y1vJDC0AusJQStqwznJC4UzFmepMYC6db/7BD+n\nemdyMTqbAgMBAAECggEABnpyfXxE1Aow2Vdheakimc3I2oiTeK4cyzFiRiPKkRfU\nHcHoyT0WdwpAt7OeYQP4QKq9gvEJwbr4LangbmQh9hFb0hPOmYeYZgv8uy/VCXHi\nNdob9mtjEb6F5mSH9XzjKNBYdHJJwGONIBZbW2T07K3JP2AQN/5PZrR/PKLGdJ8X\n/IQWd2f20RV/C0DSCbj+0ugne3X3Cxkk6x8JCRiXYv8atpGNnknJ9XFsdT3rr646\nfjo4+bl1UpjmSj1zDIUg7TtV4V9JxxDAfuT4U6wjQwulHQCFa1pV3/ApI/qDn5Qn\nSxIit4UTgunTzWkOWTpUDemWjBOroBU0WtwOJzAqnQKBgQD2vF8CL6r/o1gcjTQA\nD8WBAtuzlMYMai0SkCBd2gLGUGOBT9/JLo3P2xS5aZVQ0a4hiPR3Y71Po3Hp6j45\nIeljSC/CSa4ZkOB9q3nnIobFwK0pYUZV9snoalUAbEL6nU5kmDnCZxIznQe67E78\nP55+2Vt5ZMPDEH1ygus5QsCsVwKBgQDTd/X3cp1hMV1zyT/PAu3FmXuosQn+ZSiJ\n3JjOWk+dz80Ip1DdeRo+EW/3+2nJWx6z7Y62tXAz96yo3oI7ropNu0mz3Fgyt9JI\nqnAJB6YZtbPCFffJAuTHWor5R7eAb4XiB6Ct1M3j7tj2qq/bfQ0Bnn0ucaB5rwFl\nQLms7r75XQKBgQDaRhCixXq4Bk/3ii8bcthdZiLoPk/qQa+4AUqw3CGiQRGWHwwx\nVP7dh8lQsYgHZEdwoVDroY+jOUuYDMKZFlf6nayqazYapeEDK8R+5jtmDCrkNYrc\nl6NM+WxTIHMsdCcatNQ8F6SxhlSFV3IUk09qlmzm+m54TUk9GXZwRI5gpwKBgGNn\ntajfKNniUbK2/Ja8IrdLYdS3fCIovTipCO+fhmOBpjkWJa4mWk6o9cBVX7H2cmVU\nG00J1zeminRLPF7/uiW2D3xL7O3SeTgNXmLwRIU7Y8etee/0u0R27HMn4juusPnC\naiasrSgjQ7wYGliL3QxQyzmE0lHBEV/eYCnJhN5FAoGAGwPkTllCZPVk4s2nfm8w\nnYJpP5zLCBbS6nfkBunWIp1aOKTfoxcHEUxQoEQs66SPZXb+KjKZ6atJSXSGpE6U\nWJCQk78mKdxB6RiGAm4McVbMh0q+kIdT8ZRg3KHOfGvVlzpkKsBb9cXGgHZmQ67l\nN8I6XKBfWq+z47X1xHBSCOo=\n-----END PRIVATE KEY-----\n",
+  "client_email": "voicegptbot@brainfixerscience.iam.gserviceaccount.com",
+  "client_id": "106762656858663068377",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/voicegptbot%40brainfixerscience.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
