@@ -5,14 +5,14 @@ import config from "config";
 import { ogg } from "./ogg.js";
 import { openAI } from "./openai.js";
 import { removeFile } from "./utils.js";
-import { initCommand, processTextToChat, INITIAL_SESSION } from "./logic.js";
+import { initSession, processTextToChat, INITIAL_SESSION } from "./logic.js";
 
 const bot = new Telegraf(config.get("TG_TOKEN"));
 
 bot.use(session());
 
-bot.command("start", initCommand);
-bot.command("new", initCommand);
+bot.command("start", initSession);
+bot.command("new", initSession);
 
 bot.on(message("voice"), async (ctx) => {
   ctx.session ??= INITIAL_SESSION;

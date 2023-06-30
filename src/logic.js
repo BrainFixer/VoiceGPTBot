@@ -5,8 +5,8 @@ export const INITIAL_SESSION = {
   messages: [],
 };
 
-export async function initCommand(ctx) {
-  ctx.session = INITIAL_SESSION;
+export async function initSession(ctx) {
+  ctx.session = { messages: [] };
   await ctx.reply("Введите Ваше текстовое или запишите голосовое сообщение.");
 }
 
