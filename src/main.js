@@ -41,7 +41,7 @@ bot.on(message("text"), async (ctx) => {
     await ctx.reply(code("Идет обработка..."));
     await processTextToChat(ctx, ctx.message.text, false);
   } catch (e) {
-    console.log(`Error while text message`, e.message);
+    console.log(`Error while text messaging: `, e.message);
   }
 });
 

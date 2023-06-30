@@ -1,5 +1,6 @@
 import { openAI } from "./openai.js";
 import { textConverter } from "./text.js";
+import { code } from "telegraf/format";
 
 export const INITIAL_SESSION = {
   messages: [],
@@ -40,5 +41,11 @@ export async function processTextToChat(ctx, content, voiceOrText) {
     } else {
       await ctx.reply(response.content);
     }
+  } else {
+    await ctx.reply(
+      code(
+        "Возникла непредвиденная ошибка. Попробуйте выполнить команду /new для очистки контекста общения с ChatGPT."
+      )
+    );
   }
 }

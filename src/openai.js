@@ -25,6 +25,7 @@ class OpenAI {
       return response.data.choices[0].message;
     } catch (e) {
       console.log(`Error while chatting: ${e.message}`);
+      return null;
     }
   }
 
