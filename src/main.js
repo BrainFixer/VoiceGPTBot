@@ -5,14 +5,27 @@ import config from "config";
 import { ogg } from "./ogg.js";
 import { openAI } from "./openai.js";
 import { removeFile } from "./utils.js";
-import { initSession, processTextToChat, INITIAL_SESSION } from "./logic.js";
+import {
+  initSession,
+  startBot,
+  processTextToChat,
+  INITIAL_SESSION,
+} from "./logic.js";
 
 const bot = new Telegraf(config.get("TG_TOKEN"));
 
 bot.use(session());
 
-bot.command("start", initSession);
+bot.start(startBot);
 bot.command("new", initSession);
+
+bot.hears("Запустить бота", (ctx) => {
+  startBot(ctx);
+});
+
+bot.hears("Очистить контекст", (ctx) => {
+  initSession(ctx);
+});
 
 bot.on(message("voice"), async (ctx) => {
   ctx.session ??= INITIAL_SESSION;
