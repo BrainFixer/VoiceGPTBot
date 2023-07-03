@@ -22,7 +22,7 @@ class OpenAI {
         model: "gpt-3.5-turbo",
         messages,
       });
-      return response.data.choices[0].message;
+      return response.data;
     } catch (e) {
       console.log(`Error while chatting: ${e.message}`);
       return null;
